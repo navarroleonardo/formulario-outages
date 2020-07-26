@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Técnico</title>
+    <link rel='stylesheet' href='/stylesheets/tecnicos/create.css' />
+    <link rel='stylesheet' href='/fontawesome/css/all.css' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="/">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <img src="/images/logo.png" alt="">
+        <h1>Cadastrar Técnico</h1>
+      </div>
+      <form action="/tecnicos" method="POST">
+        <div class="form-control"> 
+          <input required type="text" name="nome" id="nome">
+          <label for="nome">Nome</label>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <input required type="text" name="email" id="email">
+          <label for="email">Email</label>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </body>
+  <script src="/javascripts/formulario_tecnico.js"></script>
+</html>

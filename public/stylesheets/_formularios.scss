@@ -1,0 +1,166 @@
+.container {
+  background-color: $neve;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 350px;
+  max-width: 90%;
+  
+  .header {
+    // visual
+    color: $vermelho;
+    background-color: $neve;
+    padding: 16px 24px 8px 24px;
+    
+    // disposição
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    a {
+      color: $vermelho;
+      font-size: 20px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+    }
+
+    img {
+      width: 100px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+  
+  form {
+    padding: 16px 24px 24px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form-control {
+      padding-top: 22.4px;
+      padding-bottom: 20px;
+      margin-bottom: 16px;
+      position: relative;
+      width: 100%;
+
+      label {
+        display: inline-block;
+        margin-bottom: 4px;
+        position: absolute;
+        top: 30px;
+        left: 12px;
+        color: #666;
+        font-weight: 700;
+        transition: all 0.3s ease-out;
+        background-color: $neve;
+        padding-left: 4px;
+        border-radius: 4px;
+      }
+      
+      input {
+        border: 1.5px solid #666;
+        border-radius: 4px;
+        display: block;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        width: 100%;
+        padding: 8px;
+        padding-right: 32px;
+        outline: none;
+        color: #666;
+        transition: all 0.5s ease-out;
+        background-color: $neve;
+        
+        &:focus + label,
+        &:valid + label {
+          transform: translate(-10px, -36px);
+          padding-left: 0px;
+        }
+      }
+      
+      i {
+        position: absolute;
+        top: 34px;
+        right: 10px;
+        visibility: hidden;
+      }
+
+      small {
+        visibility: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 2px;
+        font-weight: 500;
+      }
+
+      &.success {
+
+        input {
+          border-color: $verde;
+          color: $verde;
+        }
+
+        label {
+          color: $verde;
+        }
+
+        i.fa-check-circle {
+          color: $verde;
+          visibility: visible;
+        }
+      } 
+
+      &.error {
+
+        input {
+          border-color: $vermelho;
+          color: $vermelho;
+        }
+
+        label {
+          color: $vermelho;
+        }
+
+        i.fa-exclamation-circle {
+          color: $vermelho;
+          visibility: visible;
+        }
+
+        small {
+          color: $vermelho;
+          visibility: visible;
+        }
+      }
+    }
+
+    button {
+      background-color: $neve;
+      border: 1px solid $vermelho;
+      border-radius: 4px;
+      color: $vermelho;
+      display: block;
+      font-family: inherit;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      font-size: 16px;
+      padding: 10px;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease-out;
+      
+      &:hover {
+        background-color: $vermelho;
+        color: $neve;
+      }
+    }
+  }
+}

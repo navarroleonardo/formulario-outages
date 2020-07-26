@@ -1,0 +1,197 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #D52B1E;
+  min-height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container {
+  background-color: #FFFAFA;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 350px;
+  max-width: 90%;
+}
+
+body .container .header {
+  color: #D52B1E;
+  background-color: #FFFAFA;
+  padding: 16px 24px 8px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body .container .header a {
+  color: #D52B1E;
+  font-size: 20px;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+}
+
+body .container .header img {
+  width: 100px;
+  margin-bottom: 16px;
+}
+
+body .container .header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+body .container form {
+  padding: 16px 24px 24px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container form .form-control {
+  padding-top: 22.4px;
+  padding-bottom: 20px;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+}
+
+body .container form .form-control label {
+  display: inline-block;
+  margin-bottom: 4px;
+  position: absolute;
+  top: 30px;
+  left: 12px;
+  color: #666;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: #FFFAFA;
+  padding-left: 4px;
+  border-radius: 4px;
+}
+
+body .container form .form-control input {
+  border: 1.5px solid #666;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  padding: 8px;
+  padding-right: 32px;
+  outline: none;
+  color: #666;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  background-color: #FFFAFA;
+}
+
+body .container form .form-control input:focus + label,
+body .container form .form-control input:valid + label {
+  -webkit-transform: translate(-10px, -36px);
+          transform: translate(-10px, -36px);
+  padding-left: 0px;
+}
+
+body .container form .form-control i {
+  position: absolute;
+  top: 34px;
+  right: 10px;
+  visibility: hidden;
+}
+
+body .container form .form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  font-weight: 500;
+}
+
+body .container form .form-control.success input {
+  border-color: #2ba32b;
+  color: #2ba32b;
+}
+
+body .container form .form-control.success label {
+  color: #2ba32b;
+}
+
+body .container form .form-control.success i.fa-check-circle {
+  color: #2ba32b;
+  visibility: visible;
+}
+
+body .container form .form-control.error input {
+  border-color: #D52B1E;
+  color: #D52B1E;
+}
+
+body .container form .form-control.error label {
+  color: #D52B1E;
+}
+
+body .container form .form-control.error i.fa-exclamation-circle {
+  color: #D52B1E;
+  visibility: visible;
+}
+
+body .container form .form-control.error small {
+  color: #D52B1E;
+  visibility: visible;
+}
+
+body .container form button {
+  background-color: #FFFAFA;
+  border: 1px solid #D52B1E;
+  border-radius: 4px;
+  color: #D52B1E;
+  display: block;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+body .container form button:hover {
+  background-color: #D52B1E;
+  color: #FFFAFA;
+}
+/*# sourceMappingURL=create.css.map */
