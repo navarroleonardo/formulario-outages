@@ -4,7 +4,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   width: 350px;
-  max-width: 90%;
+  margin: 16px;
   
   .header {
     // visual
@@ -56,12 +56,11 @@
         margin-bottom: 4px;
         position: absolute;
         top: 30px;
-        left: 12px;
+        left: 10px;
         color: #666;
         font-weight: 700;
         transition: all 0.3s ease-out;
         background-color: $neve;
-        padding-left: 4px;
         border-radius: 4px;
       }
       

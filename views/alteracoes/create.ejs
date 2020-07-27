@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema Elétrico</title>
+    <link rel='stylesheet' href='/stylesheets/alteracoes/create.css' />
+    <link rel='stylesheet' href='/fontawesome/css/all.css' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="/">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <img src="/images/logo.png" alt="">
+        <h1>Alterar Sintoma</h1>
+      </div>
+      <form action="/alteracoes" method="POST">
+        <div class="form-control"> 
+          <input required type="text" name="tecnico_id" id="tecnico_id">
+          <label for="tecnico_id">Identificador</label>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <input required type="text" name="numero_ticket" id="numero_ticket">
+          <label for="numero_ticket">Número do Ticket</label>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <input required type="datetime-local" name="previsao" id="previsao">
+          <label for="previsao">Previsão de Retorno</label>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <input required type="text" name="contato" id="contato">
+          <label for="contato">Dados de Contato</label>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button type="submit">Alterar</button>
+      </form>
+    </div>
+  </body>
+  <script src="/javascripts/alteracoes.js"></script>
+</html>

@@ -1,0 +1,25 @@
+$vermelho: #D52B1E;
+$bordo: #800000;
+$verde: #2ba32b;
+$azul: #4D7298;
+$amarelo: #FFFFDA;
+$neve: #FFFAFA;
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  // visual
+  background-color: $vermelho;
+  min-height: 100vh;
+  margin: 0;
+  
+  // disposição
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @import '../formularios';
+}
