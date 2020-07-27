@@ -21,10 +21,8 @@ function checkName() {
         setErrorFor(nome, 'O nome não pode ser vazio');
     } else if (nomeValue.split(' ').length <= 1) {
         setErrorFor(nome, 'Insira o seu nome completo');
-        return 'error';
     } else if (hasSpecialCharacters(nomeValue)) {
         setErrorFor(nome, 'Caracteres especiais e/ou números são inválidos');
-        return 'error';
     } else {
         setSuccessFor(nome);
         return 'success';
@@ -36,10 +34,8 @@ function checkEmail() {
     
     if (emailValue === '') {
         setErrorFor(email, 'O e-mail não pode ser vazio');
-        return 'error';
     } else if(!isEmail(emailValue)) {
         setErrorFor(email, 'O e-mail é inválido')
-        return 'error';
     } else {
         setSuccessFor(email);
         return 'success';

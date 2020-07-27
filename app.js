@@ -8,6 +8,7 @@ require('./database/models')
 
 var indexRouter = require('./routes/index');
 var tecnicosRouter = require('./routes/tecnicos');
+var alteracoesRouter = require('./routes/alteracoes');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/tecnicos', tecnicosRouter);
+app.use('/alteracoes', alteracoesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

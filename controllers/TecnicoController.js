@@ -33,4 +33,14 @@ module.exports = {
         created ? res.json(tecnico) : res.json(tecnico.id);
 
     },
+
+    async search(req, res) {
+
+        const { id } = req.params;
+
+        const tecnico = await Tecnico.findByPk(id);
+
+        return res.json(tecnico);
+
+    }
 }
