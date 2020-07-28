@@ -25,4 +25,15 @@ module.exports = {
 
         return res.json({alteracao, created});
     },
+
+    async search(req, res) {
+
+        const { numero_ticket } = req.params;
+
+        let alteracoes = await Alteracao.findOne({
+            where: { numero_ticket }
+        });
+
+        return res.json(alteracoes);
+    }
 }

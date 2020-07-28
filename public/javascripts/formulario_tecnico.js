@@ -22,7 +22,7 @@ function checkName() {
     } else if (nomeValue.split(' ').length <= 1) {
         setErrorFor(nome, 'Insira o seu nome completo');
     } else if (hasSpecialCharacters(nomeValue)) {
-        setErrorFor(nome, 'Caracteres especiais e/ou números são inválidos');
+        setErrorFor(nome, 'Apenas letras são válidas');
     } else {
         setSuccessFor(nome);
         return 'success';

@@ -15,12 +15,23 @@ form.addEventListener('submit', async (e) => {
             let tecnico = await fetch(`http://localhost:3000/tecnicos/${tecnicoId.value}`);
             tecnico = await tecnico.json()
             
-            if (tecnico) {
-                form.submit();
+            if (!tecnico) {
+                setErrorFor(tecnicoId, 'O identificador não foi cadastrado');
                 return;
             }
-
-            setErrorFor(tecnicoId, 'O identificador não foi cadastrado')
+            
+            let alteracao = await fetch(`http://localhost:3000/alteracoes/${numeroTicket.value}`);
+            alteracao = await alteracao.json();
+            
+            if (alteracao.status === 'Aguardando') {
+                setErrorFor(numeroTicket, 'Este ticket já está na fila, aguarde', 'control');
+                return;
+            } else if (alteracao.status === 'Alterado') {
+                setErrorFor(numeroTicket, 'Este ticket já foi alterado', 'control');
+                return;
+            }
+            
+            form.submit();
 
     }
 })
@@ -35,11 +46,11 @@ function checkId() {
     const tecnicoIdValue = tecnicoId.value.trim();
 
     if (tecnicoIdValue === '') {
-        setErrorFor(tecnicoId, 'O identificador não pode ser vazio');
+        setErrorFor(tecnicoId, 'O ID não pode ser vazio');
     } else if (!isNumber(tecnicoIdValue)) {
-        setErrorFor(tecnicoId, 'O identificador deve conter apenas números');
+        setErrorFor(tecnicoId, 'O ID contém apenas números');
     } else if (charactersQuantity(tecnicoIdValue, 3, 1)) {
-        setErrorFor(tecnicoId, 'O identificador deve conter de 1 a 3 dígitos');
+        setErrorFor(tecnicoId, 'O ID contém de 1 a 3 dígitos');
     } else {
         setSuccessFor(tecnicoId);
         return 'success';
@@ -54,7 +65,7 @@ function checkNumeroTicket() {
     } else if (!isNumber(numeroTicketValue)) {
         setErrorFor(numeroTicket, 'Deve conter apenas números');
     } else if (charactersQuantity(numeroTicketValue, 8)) {
-        setErrorFor(numeroTicket, 'O número deve conter 8 dígitos');
+        setErrorFor(numeroTicket, 'O número contém 8 dígitos');
     } else {
         setSuccessFor(numeroTicket);
         return 'success';
@@ -76,7 +87,7 @@ function checkContato() {
     const contatoValue = contato.value.trim();
     
     if (contatoValue === '') {
-        setErrorFor(contato, 'Os dados de contato não podem ser vazio');
+        setErrorFor(contato, 'Os dados não podem estar vazios');
     } else {
         setSuccessFor(contato);
         return 'success';
