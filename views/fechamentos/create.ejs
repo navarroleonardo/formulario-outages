@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Outage</title>
+    <link rel='icon' href="/images/logo.png">
+    <link rel='stylesheet' href='/stylesheets/fechamentos/create.css' />
+    <link rel='stylesheet' href='/fontawesome/css/all.css' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="/">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <img src="/images/logo.png" alt="">
+        <h1>Validar Outage</h1>
+      </div>
+      <form autocomplete="off" action="/fechamentos" method="POST">
+        <div class="form-control"> 
+          <input required type="text" name="tecnico_id" id="tecnico_id">
+          <label for="tecnico_id">Identificador</label>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-select">
+            <select required name="solucao_id" id="solucao_id">
+                <option hidden value="0"></option>
+                <% for (let solucao of solucoes) { %>
+                    <option value="<%= solucao.id %>"><%= solucao.solucao %></option>
+                <% } %>
+            </select>
+            <label for="solucao_id">Solução</label>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <input required type="text" name="numero_ticket" id="numero_ticket">
+            <label for="numero_ticket">Número do Ticket</label>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <button type="submit">Alterar</button>
+      </form>
+    </div>
+  </body>
+  <script src="/javascripts/fechamentos.js"></script>
+</html>
