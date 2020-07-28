@@ -7,6 +7,10 @@ class Fechamento extends Model {
         type: DataTypes.SMALLINT.UNSIGNED,
         allowNull: false,
       },
+      solucao_id: {
+        type: DataTypes.TINYINT.UNSIGNED,
+        allowNull: false,
+      },
       cidade_id: {
         type: DataTypes.SMALLINT.UNSIGNED,
       },
@@ -15,10 +19,6 @@ class Fechamento extends Model {
       },
       numero_ticket: {
         type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: false,
-      },
-      solucao: {
-        type: DataTypes.STRING(45),
         allowNull: false,
       },
       endereco: {
@@ -39,6 +39,7 @@ class Fechamento extends Model {
     this.belongsTo(models.Tecnico, { foreignKey: 'tecnico_id', as: 'tecnico' });
     this.belongsTo(models.Cidade, { foreignKey: 'cidade_id', as: 'cidade' });
     this.belongsTo(models.Node, { foreignKey: 'node_id', as: 'node' });
+    this.belongsTo(models.Solucao, { foreignKey: 'solucao_id', as: 'solucao' });
   }
 }
 

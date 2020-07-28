@@ -14,6 +14,11 @@ module.exports = {
         allowNull: false,
         references: { model: 'Tecnicos', key: 'id' },
       },
+      solucao_id: {
+        type: Sequelize.TINYINT.UNSIGNED,
+        allowNull: false,
+        references: { model: 'Solucoes', key: 'id' },
+      },
       cidade_id: {
         type: Sequelize.SMALLINT.UNSIGNED,
         references: { model: 'Cidades', key: 'id' },
@@ -24,10 +29,6 @@ module.exports = {
       },
       numero_ticket: {
         type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: false,
-      },
-      solucao: {
-        type: Sequelize.STRING(45),
         allowNull: false,
       },
       endereco: {
