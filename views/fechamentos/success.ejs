@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Outage - Sucesso</title>
+    <link rel='icon' href="/images/logo.png">
+    <link rel='stylesheet' href='/stylesheets/geral/devolutiva.css' />
+    <link rel='stylesheet' href='/fontawesome/css/all.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h2>O cadastro foi efetuado</h2>
+      <p>O ticket <span><%= numero_ticket %></span> foi cadastrado com sucesso.</p>
+      <% let dateString = `${created_at.getHours()}:${created_at.getMinutes()}` %>
+      <p>Horário do preenchimento: <span><%= dateString %></span></p>
+      <p>Caso você não receba a devolutiva via e-mail em até 10 minutos, entre em contato com o COP MDU.</p>
+      <a href="/">
+        <i class="fas fa-home"></i>
+      </a>
+      <a href="/fechamentos">
+        <i class="fas fa-plus-circle"></i>
+      </a>
+    </div>
+  </body>
+</html>

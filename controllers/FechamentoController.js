@@ -20,7 +20,7 @@ module.exports = {
             numero_ticket,
         });
 
-        return res.json(fechamento);
+        return res.render('fechamentos/success', { numero_ticket: fechamento.numero_ticket, created_at: fechamento.createdAt });
     },
 
     async search(req, res) {

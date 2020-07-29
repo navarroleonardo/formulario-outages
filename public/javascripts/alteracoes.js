@@ -23,10 +23,10 @@ form.addEventListener('submit', async (e) => {
             let alteracao = await fetch(`http://localhost:3000/alteracoes/${numeroTicket.value}`);
             alteracao = await alteracao.json();
             
-            if (alteracao.status === 'Aguardando') {
+            if (alteracao?.status === 'Aguardando') {
                 setErrorFor(numeroTicket, 'Este ticket já está na fila, aguarde', 'control');
                 return;
-            } else if (alteracao.status === 'Alterado') {
+            } else if (alteracao?.status === 'Alterado') {
                 setErrorFor(numeroTicket, 'Este ticket já foi alterado', 'control');
                 return;
             }

@@ -1,0 +1,57 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #D52B1E;
+  min-height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container {
+  background-color: #FFFAFA;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 350px;
+  margin: 16px;
+  padding: 16px;
+  text-align: center;
+}
+
+body .container h2 {
+  margin-top: 0;
+  color: #D52B1E;
+}
+
+body .container p {
+  margin-top: 0;
+}
+
+body .container p span {
+  color: #2ba32b;
+  font-weight: 700;
+}
+
+body .container a {
+  text-decoration: none;
+  font-size: 24px;
+  margin: 10px;
+}
+
+body .container a i {
+  color: #D52B1E;
+}
+/*# sourceMappingURL=devolutiva.css.map */

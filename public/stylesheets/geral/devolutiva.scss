@@ -1,0 +1,51 @@
+@import '../variaveis';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  // visual
+  background-color: $vermelho;
+  min-height: 100vh;
+  margin: 0;
+  
+  // disposição
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .container {
+    background-color: $neve;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 350px;
+    margin: 16px;
+    padding: 16px;
+    text-align: center;
+
+    h2 {
+      margin-top: 0;
+      color: $vermelho;
+    }
+
+    p {
+      margin-top: 0;
+      span {
+        color: $verde;
+        font-weight: 700;
+      }
+    }
+
+    a{
+      text-decoration: none;
+      font-size: 24px;
+      margin: 10px;
+      i{
+        color: $vermelho;
+      }
+    }
+  }
+}

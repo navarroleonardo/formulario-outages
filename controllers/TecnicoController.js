@@ -30,7 +30,7 @@ module.exports = {
             }
         });
 
-        created ? res.json(tecnico) : res.json(tecnico.id);
+        created ? res.render('tecnicos/success', { identificador: tecnico.id }) : res.render('tecnicos/error', { identificador: tecnico.id });
 
     },
 
